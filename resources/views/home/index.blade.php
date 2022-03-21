@@ -1328,6 +1328,7 @@
 
             @include('layouts.extra_two')
            @include('layouts.extra')
+           @include('layouts.pricing')
 
         </div>
         <script async defer src="https://app.kartra.com/js/build/front/pages/optin.js"></script>

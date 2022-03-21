@@ -170,3 +170,8 @@
         integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
         data-cf-beacon='{"rayId":"6e7f2a171a3096cc","token":"fd31622ef90d4da1b9d6f9db2c97b1bf","version":"2021.12.0","si":100}'
         crossorigin="anonymous"></script> --}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="{{asset('assets/js/main.js')}}"></script>
