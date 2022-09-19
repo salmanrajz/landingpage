@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\caryaati_packages;
 use Illuminate\Http\Request;
 
 class fronthomeController extends Controller
@@ -9,7 +10,8 @@ class fronthomeController extends Controller
     //
     public function index(){
         // return "Zoom";
-        return view('home.index');
+        $caryaati_package = caryaati_packages::all();
+        return view('home.index',compact('caryaati_package'));
         // return view('admin.signin');
     }
     public function lgn(){

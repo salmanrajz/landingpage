@@ -21,7 +21,7 @@
 </div> --}}
 <!-- Basic table -->
 <section id="basic-vertical-layouts">
-
+    {{-- {{route('stripepost')}} --}}
     <div id="page" class="page container-fluid">
         <div id="page_background_color" class="row">
             <div class="content content--popup-overflow-visible kartra-sticking-topmenu"

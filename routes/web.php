@@ -131,14 +131,31 @@ use App\Http\Controllers\webUserController;
 			Route::get('/feature_leads', [fronthomeController::class, 'feature_leads'])->name('feature_leads');
 			Route::get('/feature_email', [fronthomeController::class, 'feature_email'])->name('feature_email');
 			Route::get('/VehicleSearch', [HomeController::class, 'VehicleSearch'])->name('VehicleSearch');
+			Route::post('/step_one', [HomeController::class, 'step_one'])->name('step.one');
+			Route::post('/validation', [HomeController::class, 'validation'])->name('step.two');
+			Route::post('/load-stripe', [HomeController::class, 'LoadPaymentCard'])->name('LoadPaymentCard');
+			Route::get('/stripe', [HomeController::class, 'stripe'])->name('stripe');
+			Route::post('/final', [HomeController::class, 'final'])->name('final');
+			Route::post('/stripe-pay', [HomeController::class, 'stripePost'])->name('stripepost');
+			Route::post('/products/{id}/purchase', [HomeController::class, 'purchase'])->name('products.purchase');
+			Route::post('/load-package', [HomeController::class, 'LoadPackage'])->name('load.package');
+			Route::post('/PackageDetails', [HomeController::class, 'PackageDetails'])->name('Package.Details');
+			Route::post('/PackageCalculate', [HomeController::class, 'PackageCalculate'])->name('Package.calculate');
+			Route::post('/LoadStripe', [HomeController::class, 'LoadStripe'])->name('load.final');
 
-
+            // Route::post('products/{id}/purchase', 'ProductController@purchase')->name('products.purchase');
 			Route::get('/login', [webUserController::class, 'login'])->name('web.login');
 			Route::post('/weblogin', [webUserController::class, 'weblogin'])->name('weblogin');
 			Route::get('/logout', [webUserController::class, 'logout'])->name('weblogout');
 
+
+
 			Route::get('/signup', [webUserController::class, 'signup'])->name('web.signup');
 			Route::post('/websignup', [webUserController::class, 'UserSignup'])->name('websignup');
+
+            // Route::get('stripe', 'StripePaymentController@stripe');
+            // Route::post('stripe', 'StripePaymentController@stripePost')->name('stripe.post');
+
 
 
 			//carlisting Normal

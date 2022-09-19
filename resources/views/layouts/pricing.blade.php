@@ -2454,8 +2454,8 @@
                     <div class="form-group">
                         <label for="localminutes" class="control-label col-md-12 col-sm-12 col-xs-12">Password</label>
                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
-                            <input class="form-control has-feedback-left" id="inputSuccess3" name="phone"
-                                placeholder="Type Email Here" type="tel" autocomplete="off">
+                            <input class="form-control has-feedback-left" id="inputSuccess3" name="password"
+                                placeholder="Type Email Here" type="password" autocomplete="off">
                             {{-- <span class="fa fa-lock form-control-feedback left" aria-hidden="true"></span> --}}
                         </div>
                     </div>
@@ -2463,26 +2463,39 @@
                         <label for="localminutes" class="control-label col-md-12 col-sm-12 col-xs-12">Confirm
                             Password</label>
                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
-                            <input class="form-control has-feedback-left" id="inputSuccess3" name="phone"
-                                placeholder="Type Email Here" type="tel" autocomplete="off">
+                            <input class="form-control has-feedback-left" id="inputSuccess3" name="password_confirmation"
+                                placeholder="Type Email Here" type="password" autocomplete="off">
                             {{-- <span class="fa fa-lock form-control-feedback left" aria-hidden="true"></span> --}}
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-check form-check-inline col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" name="privacy_terms"/>
                             <label class="form-check-label" for="inlineCheckbox1">
                                 I Accept <a href="#">Terms and Conditions</a>, <a href="#">Privacy Policy</a>
                             </label>
                         </div>
 
                     </div>
+                    <hr>
+                    {{-- <div class="form-group"> --}}
+
+                    {{-- </div> --}}
                     <div class="form-group float-right right modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary"
-                        onclick="step_one()"
+                        onclick="step_one('{{route('step.one')}}','MyForm','RedirectMe')"
                         >Create Account</button>
                     </div>
+                    <div class="text-center center">
+            <div id="loading1" style="display:none;text-align:center;">
+                   Loading ......
+                    <img src="https://www.caryaati.com/assets/loading.gif" alt="Loading" style="width:50px;">
+                </div>
+                    </div>
+                    <div class="alert alert-danger print-error-msg" style="display:none">
+                            <ul></ul>
+                        </div>
                 </form>
                 <form id="MyForm2" style="display:none;">
                     <div class="form-group">
@@ -2490,7 +2503,7 @@
                             Email Code:
                         </label>
                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
-                            <input class="form-control has-feedback-left" id="inputSuccess3" name="name"
+                            <input class="form-control has-feedback-left" id="inputSuccess3" name="email_code"
                                 placeholder="Type Agent Name Here" type="text" autocomplete="off" autocomplete="off">
                                 <small>
                                <a href="#">Resend Email Code</a>
@@ -2502,7 +2515,7 @@
                     <div class="form-group">
                         <label for="localminutes" class="control-label col-md-12 col-sm-12 col-xs-12">Phone Code</label>
                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
-                            <input class="form-control has-feedback-left" id="inputSuccess3" name="email"
+                            <input class="form-control has-feedback-left" id="inputSuccess3" name="phone_code"
                                 placeholder="Type Email Here" type="email" autocomplete="off">
                             <small>
                                <a href="#">Resend SMS Code</a>
@@ -2514,11 +2527,21 @@
                     <div class="form-group float-right right modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary"
-                        onclick="step_two()"
+                        onclick="step_two('{{route('step.two')}}','MyForm2','{{'load.package'}}','{{route('LoadPaymentCard')}}')"
                         >Validate Code</button>
                     </div>
+                    <div id="loading1" style="display:none;text-align:center;">
+                   Loading ......
+                    <img src="https://www.caryaati.com/assets/loading.gif" alt="Loading" style="width:50px;">
+                </div>
+                <div class="alert alert-danger print-error-msg2" style="display:none">
+                            <ul></ul>
+                        </div>
                 </form>
-                <div id="div3" style="display:none;text-align:center;">
+                <form id="MyForm3">
+
+                </form>
+                <div id="div4" style="display:none;">
                     Please wait 5 to 10 seconds, while we are redirecting you to Payment Page ......
                     <img src="https://www.caryaati.com/assets/loading.gif" alt="Loading" style="width:50px;">
                 </div>
